@@ -18,7 +18,7 @@ s3 = Aws::S3::Resource.new(
 )
 
 s3.bucket('jdstore').object('statlines.csv').get(response_target: 'lib/assets/db/stats.csv')
-'''
+```
 
 ## 'whenever' gem
 

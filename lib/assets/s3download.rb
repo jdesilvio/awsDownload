@@ -2,10 +2,12 @@
 
 require 'aws-sdk'
 
+#provide AWS credentials
 s3 = Aws::S3::Resource.new(
   region: 'us-east-1',
-  access_key_id: 'ACCESS_KEY',
-  secret_access_key: 'SECRET_KEY'
+  access_key_id: 'access_key_id',
+  secret_access_key: 'secret_access_key'
 )
 
-s3.bucket('jdstore').object('statlines.csv').get(response_target: 'lib/assets/db/stats.csv')
+#download files from S3
+s3.bucket('bucket').object('file.csv').get(response_target: 'file.csv')
